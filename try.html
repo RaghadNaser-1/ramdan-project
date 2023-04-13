@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box:hover::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: black; */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover::before {
+  opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box" title="This is the tooltip text">Hover over me</div>
+
+</body>
+</html>
